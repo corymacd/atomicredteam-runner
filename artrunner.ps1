@@ -11,7 +11,8 @@ IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/mas
 Install-AtomicRedTeam -getAtomics -Force
  
 # run the tests from the modules_to_run list
+Write-host "Checking/Fetching Prereqs..."
 ForEach($id in $modules_to_run){ invoke-atomictest $id -GetPrereqs}
-Write-host "Starting Run"
+Write-host "Starting Run..."
 ForEach($id in $modules_to_run){ invoke-atomictest $id}
 Write-host "Run Complete."
