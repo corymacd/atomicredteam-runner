@@ -19,3 +19,4 @@ function Invoke-ArtTest() {
 
 ForEach($id in $modules_to_run){ invoke-arttest $id }
 
+Invoke-AtomicTest G0102 -CleanUp
